@@ -1,0 +1,22 @@
+version: '3'
+services:
+  postgres-api-cdc:
+    image: 'postgres:alpine'
+    volumes:
+      - proposta-volume:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: propostas
+      POSTGRES_PASSWORD: "@901256"
+      POSTGRES_DB: db_cdc
+
+  pgAdmin:
+    image: dpage/pgadmin4:5.5
+    ports:
+      - "4242:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "@901256"
+    depends_on:
+      - postgres-api-cdc

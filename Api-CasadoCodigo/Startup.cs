@@ -25,10 +25,10 @@ namespace Api_CasadoCodigo
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
+            /**services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api_CasadoCodigo", Version = "v1" });
-            });
+            });*/
             //criando uma instância do AutoMapper e definindo uma mapeamento entre um modelo de domínio
             //(Model.Author) e um modelo de exibição (AuthorRequest). 
             var config = new AutoMapper.MapperConfiguration(cfg =>
@@ -54,8 +54,8 @@ namespace Api_CasadoCodigo
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api_CasadoCodigo v1"));
+                //app.UseSwagger();
+                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api_CasadoCodigo v1"));
             }
 
             app.UseHttpsRedirection();

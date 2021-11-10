@@ -25,10 +25,10 @@ namespace Api_CasadoCodigo.Controllers
             try
             {
                 if (ModelState.IsValid)
-                {
-                    var author = _mapper.Map<Author>(authorRequest);
-                    Console.WriteLine($"{author} - { guid}");
-                }
+                    BadRequest();
+                var author = _mapper.Map<Author>(authorRequest);
+                Console.WriteLine($"{author} - { guid}");
+               
                 //salvar no banco
 
                 //monta a url da requisição

@@ -11,6 +11,9 @@ namespace Api_CasadoCodigo.Model
         public int numero { get; set; }
         public DateTime Instant { get; set; }
 
+        public Author()
+        {
+        }
         public Author(string name, string email, string description) {
             Name = name;
             Email = email;

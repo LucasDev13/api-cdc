@@ -1,6 +1,7 @@
 using Api_CasadoCodigo.Dto;
 using Api_CasadoCodigo.Model;
 using AutoMapper;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -43,6 +44,8 @@ namespace Api_CasadoCodigo
 
             IMapper mapper = config.CreateMapper();
             services.AddSingleton(mapper);
+            //Adicionado o fluent Validation.
+            services.AddMvcCore().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

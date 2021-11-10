@@ -1,27 +1,30 @@
 ﻿using Api_CasadoCodigo.Model;
+using FsCheck;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Api_CasadoCodigo.Dto
 {
     public class AuthorRequest
     {
-        [Required]
-        [StringLength(10)]
         public string Name { get; set; }
-        [Required]
-        [EmailAddress]
         public string Email { get; set; }
-        [Required]
-        [StringLength(400, ErrorMessage = "Decrição muito grande.")]
         public string Description { get;  set; }
+        public DateTime Idade { get; set; }
 
-        public Author ToModel()
+        public AuthorRequest()
         {
-            return new Author(
-                this.Name,
-                this.Email,
-                this.Description
-            );
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is AuthorRequest request &&
+                   Description == request.Description;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Description);
         }
 
         public override string ToString()

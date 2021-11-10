@@ -24,12 +24,11 @@ namespace Api_CasadoCodigo.Controllers
             Guid guid = Guid.NewGuid();
             try
             {
-                var author = _mapper.Map<Author>(authorRequest);
-                if (author == null)
+                if (ModelState.IsValid)
                 {
-                    return BadRequest();
+                    var author = _mapper.Map<Author>(authorRequest);
+                    Console.WriteLine($"{author} - { guid}");
                 }
-                Console.WriteLine($"{author} - { guid}");
                 //salvar no banco
 
                 //monta a url da requisição
@@ -41,7 +40,7 @@ namespace Api_CasadoCodigo.Controllers
             {
                 Console.WriteLine($"Menssagem de erro -> {e.Message}");
             }
-            return Ok(guid.ToString());
+            return Ok(authorRequest);
 
         }
     }

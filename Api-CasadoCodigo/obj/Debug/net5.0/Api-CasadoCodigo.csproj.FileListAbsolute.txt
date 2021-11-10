@@ -27,3 +27,9 @@ C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-
 C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\obj\Debug\net5.0\Api-CasadoCodigo.pdb
 C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\obj\Debug\net5.0\Api-CasadoCodigo.genruntimeconfig.cache
 C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\bin\Debug\net5.0\FsCheck.dll
+C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\bin\Debug\net5.0\FSharp.Core.dll
+C:\Users\Lucas - Developer C#\Documents\workerspace-dotnet\Api-CasadoCodigo\Api-CasadoCodigo\obj\Debug\net5.0\Api-CasadoCodigo.csproj.CopyComplete

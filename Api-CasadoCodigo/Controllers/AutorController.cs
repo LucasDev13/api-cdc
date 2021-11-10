@@ -1,5 +1,4 @@
 ﻿using Api_CasadoCodigo.Dto;
-using Api_CasadoCodigo.Mapper;
 using Api_CasadoCodigo.Model;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;

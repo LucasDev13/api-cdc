@@ -35,6 +35,8 @@ namespace Api_CasadoCodigo
                 {
                     cfg.CreateMap<AuthorRequest, Author>();
                     cfg.CreateMap<Author, AuthorRequest>();
+                    cfg.CreateMap<CategoriaRequest, Categoria>();
+                    cfg.CreateMap<Categoria, CategoriaRequest>();
                 });
             //A seguir para usar a instância criada do AutoMapper precisamos registrar o
             //IMapper como um serviço usando o contêiner de injeção de dependência nativa da

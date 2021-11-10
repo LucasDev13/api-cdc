@@ -19,13 +19,14 @@ namespace Api_CasadoCodigo.Controllers
         }
 
         [HttpPost]
-        public IActionResult Save([FromBody] AuthorRequest authorRequest)
+        public IActionResult Save(
+            [FromBody] AuthorRequest authorRequest)
         {
             Guid guid = Guid.NewGuid();
             try
             {
-                if (ModelState.IsValid)
-                    BadRequest();
+                if (!ModelState.IsValid)
+                return BadRequest();
                 var author = _mapper.Map<Author>(authorRequest);
                 Console.WriteLine($"{author} - { guid}");
                
